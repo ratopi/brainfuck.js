@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>brainfuck.js</title>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="src/de.ratopi.brainfuck.js"></script>
+	<script type="text/javascript">
+		$( document ).ready(
+			function()
+			{
+ 				var helloWorld = "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.";
+
+				de.ratopi.brainfuck( helloWorld ).run();
+			}
+		);
+	</script>
+
+</head>
+
+<body>
+<h1>brainfuck.js</h1>
+</body>
+
+</html>
