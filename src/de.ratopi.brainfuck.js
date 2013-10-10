@@ -137,6 +137,7 @@ de.ratopi.brainfuck = function( programText, options )
 	function out( character )
 	{
         console.log( "out: " + String.fromCharCode( character ) + " (" + character + ")" );
+        $( '#output' ).text( $( '#output' ).text() + String.fromCharCode( character ) );
 	}
 
 	// ---
