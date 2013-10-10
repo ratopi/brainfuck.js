@@ -2,6 +2,7 @@ A simple brainfuck implementation in JavaScript.
 
 Missing:
 * Input of characters
-* Output to a textarea (or another HTML-tag)
+
+See a demo at: http://ratopi.github.io/brainfuck.js/.
 
 For specification of brainfuck see http://en.wikipedia.org/wiki/Brainfuck.
