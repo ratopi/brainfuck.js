@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 	<title>brainfuck.js</title>
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -10,9 +9,14 @@
 		$( document ).ready(
 			function()
 			{
- 				var helloWorld = "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.";
-
-				de.ratopi.brainfuck( helloWorld ).run();
+				$( '#evaluate' ).bind( 'click',
+					function()
+					{
+						$( '#output' ).text( '' );
+						var code = $( '#code' ).text();
+						de.ratopi.brainfuck( code ).run();
+					}
+				);
 			}
 		);
 	</script>
@@ -21,7 +25,17 @@
 
 <body>
 <h1>brainfuck.js</h1>
-<textarea id="output"></textarea>
-</body>
+<label for="code">code</label>
+<br/>
+<textarea id="code" style="width:800px;">++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.</textarea>
+<br/>
+<button id="evaluate">evaluate</button>
+<br/>
+<label for="output">output</label>
+<br/>
+<textarea id="output" style="width:800px;"></textarea>
 
+
+
+</body>
 </html>
